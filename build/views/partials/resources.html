@@ -1,0 +1,18 @@
+<div class="col-md-4 col-sm-6 search-form" >
+  <input type="text" class="search-box" placeholder="search" ng-model="vm.searchString">
+  <ul class="resource-items">
+    <li class="resource-item"ng-repeat="blog in blgCtrl.blogs | filter: vm.searchString">
+          <a href="{{blog.link}}">  <h4>{{blog.title}}</h4></a>
+          <h5><em>{{blog.blogType}}</em></h5>
+          <h5>{{blog.description}}</h5>
+      <a class="link-a"href="{{blog.link}}">{{blog.link}}</a><br>
+
+      <div class="portfolio-meta">
+        <p>
+          <span> posted at {{blog.date | date: MM/dd/yyyy}} by	<a class="author"href="#">{{blog.author}}</a> </span>
+
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
