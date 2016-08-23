@@ -1,0 +1,10 @@
+<section ng-cloak ng-controller="BlogController as blgCtrl" ng-init="blgCtrl.getBlogs()">
+  <custom-nav></custom-nav>
+  <div class="container">
+    <div class="row">
+      <a  class="addResource" ng-click="show1 = !show1" href="#">Add a Resource</a><br>
+      <custom-addnew></custom-addnew>
+      <custom-resource></custom-resource>
+      </div>
+  </div>
+</section>
